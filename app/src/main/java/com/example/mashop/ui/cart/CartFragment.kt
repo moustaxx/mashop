@@ -181,7 +181,7 @@ class CartFragment : Fragment() {
 
             minusBtn.setOnClickListener {
                 val curValue = cartStateElement.quantity - 1
-                if (curValue < 0) return@setOnClickListener
+                if (curValue < 1) return@setOnClickListener
                 cartStateElement.quantity = curValue
                 tvQuantity.text = curValue.toString()
                 refreshSummaryPrice()
@@ -232,6 +232,7 @@ class CartFragment : Fragment() {
                 .show()
 
             refreshSummaryPrice()
+            binding.cartList.removeAllViews()
             binding.cartNoResult.visibility = View.VISIBLE
         }
 

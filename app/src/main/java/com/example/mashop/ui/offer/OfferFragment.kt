@@ -116,7 +116,7 @@ class OfferFragment : Fragment() {
 
         binding.offerMinusBtn.setOnClickListener {
             val curValue = quantity - 1
-            if (curValue < 0) return@setOnClickListener
+            if (curValue < 1) return@setOnClickListener
             quantity = curValue
             binding.offerQuantity.text = curValue.toString()
         }
