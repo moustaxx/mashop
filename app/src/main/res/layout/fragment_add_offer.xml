@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            app:suffixText="zł">
+            app:suffixText="@string/currency_symbol">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"

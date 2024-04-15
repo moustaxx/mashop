@@ -58,7 +58,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0 zł"
+                android:text="@string/_0_zl"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="?attr/colorPrimary" />
 

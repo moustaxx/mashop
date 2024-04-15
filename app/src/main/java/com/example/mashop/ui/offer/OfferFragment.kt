@@ -96,7 +96,7 @@ class OfferFragment : Fragment() {
         if (offer == null) return
 
         binding.offerTitle.text = offer.title
-        binding.offerPrice.text = String.format("%.2f", offer.price) + " zł"
+        binding.offerPrice.text = String.format("%.2f", offer.price) + " " + getString(R.string.currency_symbol)
         binding.offerContent.text = offer.content
         binding.offerSellerName.text = offer.seller.firstName
         binding.offerSellerCity.text = offer.seller.city

@@ -83,7 +83,7 @@ class CartFragment : Fragment() {
     private fun refreshSummaryPrice() {
         if (cartViewModel.cartState == null) return
         val summaryPrice = cartViewModel.cartState!!.fold(0.0) { a, b -> a + (b.product.price * b.quantity) }
-        binding.cartSummaryPrice.text = String.format("%.2f", summaryPrice) + " zł"
+        binding.cartSummaryPrice.text = String.format("%.2f", summaryPrice) + " " + getString(R.string.currency_symbol)
     }
 
     private suspend fun fetchUser(): User? {
@@ -167,7 +167,7 @@ class CartFragment : Fragment() {
 
             tvId.text = offer.id.toString()
             tvTitle.text = offer.title
-            tvPrice.text = String.format("%.2f", offer.price) + " zł"
+            tvPrice.text = String.format("%.2f", offer.price) + " " + getString(R.string.currency_symbol)
             tvQuantity.text = cartStateElement.quantity.toString()
 
             if (offer.imageUrl != null) {

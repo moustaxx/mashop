@@ -29,7 +29,7 @@ class OfferListViewAdapter(context: Context, entries: ArrayList<OfferListItem>) 
         val data = getItem(position)!!
 
         tvTitle.text = data.title
-        tvPrice.text = String.format("%.2f", data.price) + " zł"
+        tvPrice.text = String.format("%.2f", data.price) + " " + context.getString(R.string.currency_symbol)
 
         if (data.imageUrl != null) {
             val url = "https://${supabase.supabaseUrl}/storage/v1/object/public/${data.imageUrl}"

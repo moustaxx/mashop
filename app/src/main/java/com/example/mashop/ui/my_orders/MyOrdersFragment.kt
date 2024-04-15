@@ -89,7 +89,7 @@ class MyOrdersFragment : Fragment() {
                 val imageView = cv2.findViewById<ImageView>(R.id.orderListItemOfferImage)
 
                 tvTitle.text = offer.title
-                tvPrice.text = String.format("%.2f", offer.price) + " zł"
+                tvPrice.text = String.format("%.2f", offer.price) + " " + getString(R.string.currency_symbol)
                 tvQuantity.text = orderedOffer.quantity.toString()
 
                 if (offer.imageUrl != null) {
